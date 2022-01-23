@@ -1,3 +1,4 @@
-def call():
+def call(a):
     return "shubham singh"
-print(call())
+a='shu'
+print(call(a))
