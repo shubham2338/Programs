@@ -1,0 +1,24 @@
+Q1. Write a Python code to find the longest continuous series of small alphabetic letters in a text. 
+e.g. input:"This is just an example123 of an ExtrEmely long string". output: "example"
+
+#Brute Force Approach
+def fun(s):
+    s=s.split() # string to list
+    res=''
+    for i in s: 
+        j=0
+        crr=''
+        while j<len(i):
+            if i[j].islower():
+                crr+=i[j]
+            if (i[j].isdigit()) or (i[j].isupper()) : #check if digit or uppercase just change curr to empty
+                crr=''
+            if len(crr)>len(res):
+                res=crr
+            j+=1
+    return res
+    
+#Driver Code
+#s=input() # uncomment this line for user input
+s="This is just an example123 of an ExtrEmely long string"
+print(fun(s))
