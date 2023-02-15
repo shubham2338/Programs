@@ -1,4 +1,4 @@
-def inSequence(A, B, C):
+def inSequenc(A, B, C):
     # code here
     if C==0: 
         if A==B:
